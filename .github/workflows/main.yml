@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy via SCP
         run: |
-          rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/myapp
+          rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./ ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/my.test.app
 
       - name: Restart App via SSH
         run: |
